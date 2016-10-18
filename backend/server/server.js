@@ -12,11 +12,15 @@ log4js.configure({
   replaceConsole: true,
 });
 
+var dotenv = require('dotenv');
+dotenv.config();
+
 var loopback = require('loopback');
 var boot = require('loopback-boot');
 
 var app = module.exports = loopback();
 
+<<<<<<< HEAD
 app.get('/hello', function(request, response) {
   const data = {
     hello: request.query.name || 'world',
@@ -29,6 +33,21 @@ app.get('/hello', function(request, response) {
   response.send(JSON.stringify(data));
 });
 
+=======
+
+
+app.get('/hello', function (req, res) {
+  const data = {
+    hello: 'world',
+    time: new Date(),
+  };
+  res.header({ 'Content-Type': 'application/json' });
+  res.send(JSON.stringify(data));
+});
+
+
+
+>>>>>>> e1c150d06744543cd833e9439ac0fb36b184b239
 app.start = function() {
   // start the web server
   return app.listen(function() {

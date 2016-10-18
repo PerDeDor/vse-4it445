@@ -19,7 +19,17 @@
     }
   },
   "validations": [],
+<<<<<<< HEAD
   "relations": {},
+=======
+  "relations": {
+    "category": {
+      "type": "belongsTo",
+      "model": "EshopCategory",
+      "foreignKey": "categoryId"
+    }
+  },
+>>>>>>> e1c150d06744543cd833e9439ac0fb36b184b239
   "acls": [],
   "methods": {}
 }
